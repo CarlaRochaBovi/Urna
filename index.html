@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Urna Eletrônica</title>
+</head>
+<body>
+    <div id="app">
+        <div class="screen">
+
+            <div id="inicial-screen">
+                <div class="start-info">
+                    <h1>Zilda Prado Paulovich</h1>
+                    <p>Urna Eletrônica by <span class="carla">Carla</span></p>
+                </div>
+
+                <div class="info">
+                    <h2>Como funciona...</h2>
+                    <p>
+                        branco = voto nulo, tudo corrige = apaga um caractere, confirma = confirma o numero digitado e adiciona um voto a chapa do numero selecionado <br>
+                        Utlizize o teclado a direita para digitar os numeros das chapas seguintes 
+                    </p>
+
+                    <div class="chapas">
+                        <div>
+                            <h1>chapa 1</h1>
+                            <h4>pessoa 1</h4>
+                            <h4>pessoa 2</h4>
+                            <h4>pessoa 3</h4>
+                            <h4>pessoa 4</h4>
+                            <h1>Número da chapa: 1</h1>
+                        </div>
+
+                        <div>
+                            <h1>chapa 2</h1>
+                            <h4>pessoa 1</h4>
+                            <h4>pessoa 2</h4>
+                            <h4>pessoa 3</h4>
+                            <h4>pessoa 4</h4>
+                            <h1>Número da chapa: 4</h1>
+                        </div>
+                    </div>
+
+                    <button onclick="start()">iniciar</button>
+
+                </div>
+            </div>
+
+
+
+            <div id="input-screen">
+                <h1>Digite o numero de uma das chapas...</h1>
+                <input id ="input" type="text" placeholder="0" disabled value="0">
+            </div>
+
+            <div id="end">
+                <h1>FIM</h1>
+            </div>
+        </div>
+            
+
+
+        <div class="keyboard">
+            <div class="keys">
+                <div>
+                    <button id="btn" class="btn num" onclick="calculate(1)">1</button>
+                    <button id="btn" class="btn num" onclick="calculate(2)">2</button>
+                    <button id="btn" class="btn num" onclick="calculate(3)">3</button>
+                </div>
+
+                <div>
+                    <button id="btn" class="btn num" onclick="calculate(4)">4</button>
+                    <button id="btn" class="btn num" onclick="calculate(5)">5</button>
+                    <button id="btn" class="btn num" onclick="calculate(6)">6</button>
+                </div>
+
+                <div>
+                    <button id="btn" class="btn num" onclick="calculate(7)">7</button>
+                    <button id="btn" class="btn num" onclick="calculate(8)">8</button>
+                    <button id="btn" class="btn num" onclick="calculate(9)">9</button>
+                </div>
+
+                <div>
+                    <button id="btn" class="btn num" onclick="calculate(0)">0</button>
+                </div>
+
+                <div>
+                    <button class="btn text" onclick="ok()">Branco</button>
+                    <button class="btn text" onclick="erase()">Corrige</button>
+                    <button class="btn text" onclick="ok()">Confirma</button>
+                </div>
+
+
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

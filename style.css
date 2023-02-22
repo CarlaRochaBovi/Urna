@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    list-style: none
+}
+
+body {
+    padding: 100px;
+    width: 100%;
+    height: 100vh;
+}
+
+#app {
+    padding: 50px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+/* SCREEN-------------------------------------------------------------------------------- */
+
+.screen {
+    background: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#inicial-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.start-info h1 {
+    color: #344e41;
+}
+
+.chapas {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#input-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#input-screen input {
+    font-size: 60px;
+    text-align: center;
+    width: 400px;
+    height: 20%;
+}
+
+/* KEYBOARD-------------------------------------------------------------------------------- */
+
+.keyboard {
+    width: 600px;
+    gap: 10px;
+    padding: 30px;
+    background: #343a40;
+}
+
+.keys {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.keys div{
+    display: flex;
+    gap: 10px
+}
+
+.keys div:nth-child(5) {
+    display: flex;
+    align-items: end;
+}
+.btn{
+    transition: .2s;
+    border-radius: 2px;
+    border: none;
+    font-size: 24px;
+    padding: 8px;
+}
+
+.num {
+    background: #212529;
+    color: white;
+
+    width: 80px;
+}
+
+.num:hover {
+    background: #121417;
+}
+
+.text {
+    text-transform: uppercase;
+    color: black;
+}
+
+.text:nth-child(1) {
+    background: #ffffff;
+}
+
+.text:nth-child(1):hover {
+    background: #d9d9d9;
+}
+.text:nth-child(2) {
+    background: #e01e37;
+}
+
+.text:nth-child(2):hover {
+    background: #bd1f36;
+}
+
+.text:nth-child(3) {
+    height: 60px;
+    background: #52b788;
+}
+
+.text:nth-child(3):hover {
+    background: #40916c;
+}
+

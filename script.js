@@ -45,11 +45,14 @@ function ok() {
     if(canIStart === true){
 
         if(input.value == 1) {
+            if(objeto.chapa1 == null) {
+                objeto.chapa1 = 0
+            }
             objeto.chapa1++
-            localStorage.setItem('chapa', JSON.stringify(objeto))
+            localStorage.setItem('chapa', JSON.stringify(objeto.chapa1))
         } else if(input.value == 4){
             objeto.chapa2++
-            localStorage.setItem('chapa', JSON.stringify(objeto))
+            localStorage.setItem('chapa', JSON.stringify(objeto.chapa2))
         } else {
             "esse numero é inválido"
         }    

@@ -21,7 +21,7 @@ const btn = document.getElementById('btn')
 const input = document.getElementById('input')
 let expression =  ''
 function calculate(num) {
-    expression += num
+    expression = num
     input.value = expression
 }
 

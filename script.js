@@ -5,6 +5,10 @@ let objeto = {
 }
 
 
+
+objeto = JSON.parse(localStorage.getItem('chapa'))
+console.log(objeto)
+
 let canIStart = false
 console.log(objeto.chapa1, objeto.chapa2)
 const inicialScreen = document.getElementById('inicial-screen')
@@ -23,24 +27,37 @@ function calculate(num) {
     input.value = expression
 }
 
+
+function nulo() {
+    if(canIStart === true) {
+        return "nulo"
+    }   
+}
+
+function again() {
+    inputScreen.style.display = 'flex'
+    inicialScreen.style.display = 'flex'
+}
+
 const inputScreen = document.getElementById('input-screen')
 function ok() {
     if(canIStart === true){
 
         if(input.value == 1) {
             objeto.chapa1++
+            localStorage.setItem('chapa', JSON.stringify(objeto))
         } else if(input.value == 4){
             objeto.chapa2++
+            localStorage.setItem('chapa', JSON.stringify(objeto))
         } else {
-            console.log('nulo')
+            "esse numero é inválido"
         }    
+        canIStart = false
         inputScreen.style.display = 'none'
     } 
+    setTimeout(again, 5000)
+    console.log(objeto)
 }
 
-let chapas = localStorage.getItem('chapa')
+    
 
-localStorage.setItem('chapa', JSON.stringify(objeto))
-var retrieve = localStorage.getItem('chapa')
-
-console.log('chapa', JSON.parse(retrieve))

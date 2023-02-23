@@ -7,10 +7,8 @@ let objeto = {
 
 
 objeto = JSON.parse(localStorage.getItem('chapa'))
-console.log(objeto)
 
 let canIStart = false
-console.log(objeto.chapa1, objeto.chapa2)
 const inicialScreen = document.getElementById('inicial-screen')
 function start() {
     canIStart = true
@@ -23,10 +21,13 @@ const btn = document.getElementById('btn')
 const input = document.getElementById('input')
 let expression =  ''
 function calculate(num) {
-    expression = num
+    expression += num
     input.value = expression
 }
 
+function erase() {
+    input.value = 0
+}
 
 function nulo() {
     if(canIStart === true) {
@@ -58,6 +59,6 @@ function ok() {
     setTimeout(again, 5000)
     console.log(objeto)
 }
+console.log(objeto)
 
-    
 

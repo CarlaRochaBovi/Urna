@@ -1,13 +1,13 @@
 
+
+
+
+
+
 let objeto = {
     chapa1: 0,
     chapa2: 0
-}
-
-
-
-objeto = JSON.parse(localStorage.getItem('chapa'))
-
+};
 let canIStart = false
 const inicialScreen = document.getElementById('inicial-screen')
 function start() {
@@ -62,3 +62,4 @@ function ok() {
 console.log(objeto)
 
 
+objeto = JSON.parse(localStorage.getItem('chapa'))

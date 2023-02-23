@@ -4,10 +4,7 @@
 
 
 
-let objeto = {
-    chapa1: 0,
-    chapa2: 0
-};
+
 let canIStart = false
 const inicialScreen = document.getElementById('inicial-screen')
 function start() {
@@ -39,7 +36,10 @@ function again() {
     inputScreen.style.display = 'flex'
     inicialScreen.style.display = 'flex'
 }
-
+let objeto = {
+    chapa1: 0,
+    chapa2: 0
+};
 const inputScreen = document.getElementById('input-screen')
 function ok() {
     if(canIStart === true){

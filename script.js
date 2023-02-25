@@ -26,7 +26,9 @@ function erase() {
 
 function nulo() {
     if(canIStart === true) {
-        return "nulo"
+        inputScreen.style.display = 'none'
+        setTimeout(again, 5000)
+        return canIStart = false
     }   
 }
 
@@ -55,7 +57,7 @@ confirmBtn.addEventListener('click', function()  {
     } 
     localStorage.setItem('chapa', JSON.stringify(objeto))
     setTimeout(again, 5000)
-    console.log(objeto.chapa1, objeto.chapa2)
+    console.log(objeto)
 })
 
 objeto = JSON.parse(localStorage.getItem('chapa'))

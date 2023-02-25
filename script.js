@@ -1,4 +1,9 @@
 
+let objeto = {
+    chapa1: 0,
+    chapa2: 0
+}
+
 let canIStart = false
 const inicialScreen = document.getElementById('inicial-screen')
 function start() {
@@ -30,13 +35,12 @@ function again() {
     inicialScreen.style.display = 'flex'
 }
 
-let objeto = {
-    chapa1: 0,
-    chapa2: 0
-}
+
 
 const inputScreen = document.getElementById('input-screen')
-function inputPoints() {
+const confirmBtn = document.getElementById('confirm')
+
+confirmBtn.addEventListener('click', function()  {
     if(canIStart === true){
 
         if(input.value == 1) {
@@ -52,7 +56,7 @@ function inputPoints() {
     localStorage.setItem('chapa', JSON.stringify(objeto))
     setTimeout(again, 5000)
     console.log(objeto.chapa1, objeto.chapa2)
-}
+})
 
 objeto = JSON.parse(localStorage.getItem('chapa'))
 

@@ -50,7 +50,7 @@ confirmBtn.addEventListener('click', function()  {
         } else if(input.value == 4){
             objeto.chapa2++
         } else {
-            "esse numero é inválido"
+            return alert("NÃO TEMOS UMA CHAPA COM ESSE NÚMERO: " + input.value)
         }    
         canIStart = false
         inputScreen.style.display = 'none'

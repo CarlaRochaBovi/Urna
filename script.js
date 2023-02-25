@@ -36,7 +36,7 @@ let objeto = {
 }
 
 const inputScreen = document.getElementById('input-screen')
-function ok() {
+function next() {
     if(canIStart === true){
 
         if(input.value == 1) {

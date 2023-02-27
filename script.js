@@ -56,10 +56,10 @@ confirmBtn.addEventListener('click', function()  {
         canIStart = false
         inputScreen.style.display = 'none'
     } 
-    localStorage.setItem('chapa', JSON.stringify(objeto))
+    
     setTimeout(again, 5000)
     console.log(objeto)
 })
-
+localStorage.setItem('chapa', JSON.stringify(objeto))
 objeto = JSON.parse(localStorage.getItem('chapa'))
 

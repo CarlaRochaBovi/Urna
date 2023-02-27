@@ -1,9 +1,21 @@
 
+reset()
+
+function reset() {
+    canIReset = false
+    if(canIReset === true) {
+        localStorage.clear()
+    }
+}
+
 
 let objeto = JSON.parse(localStorage.getItem('chapa')) || {
     primeiraChapa: 0,
     segundaChapa: 0
 }
+
+
+
 let canIStart = false
 const inicialScreen = document.getElementById('inicial-screen')
 function start() {
@@ -48,8 +60,12 @@ confirmBtn.addEventListener('click', function()  {
 
         if(input.value == 1) {
             objeto['primeiraChapa'] += 1
+            localStorage.setItem('chapa', JSON.stringify(objeto))
+
         } else if(input.value == 4){
             objeto['segundaChapa'] += 1
+            localStorage.setItem('chapa', JSON.stringify(objeto))
+
         } else {
             return alert("NÃO TEMOS UMA CHAPA COM ESSE NÚMERO: " + input.value)
         }    
@@ -60,6 +76,5 @@ confirmBtn.addEventListener('click', function()  {
     setTimeout(again, 5000)
     console.log(objeto)
 })
-localStorage.setItem('chapa', JSON.stringify(objeto))
 
 

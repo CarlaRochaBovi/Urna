@@ -1,9 +1,9 @@
 
+
 let objeto = {
     chapa1: 0,
     chapa2: 0
 }
-
 let canIStart = false
 const inicialScreen = document.getElementById('inicial-screen')
 function start() {
@@ -43,12 +43,13 @@ const inputScreen = document.getElementById('input-screen')
 const confirmBtn = document.getElementById('confirm')
 
 confirmBtn.addEventListener('click', function()  {
+
     if(canIStart === true){
 
         if(input.value == 1) {
-            objeto.chapa1++
+            objeto.chapa1 = objeto.chapa1 + 1
         } else if(input.value == 4){
-            objeto.chapa2++
+            objeto.chapa2 = objeto.chapa2 + 1
         } else {
             return alert("NÃO TEMOS UMA CHAPA COM ESSE NÚMERO: " + input.value)
         }    

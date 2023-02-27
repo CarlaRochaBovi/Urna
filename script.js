@@ -1,8 +1,8 @@
 
 
-let objeto = {
-    primeiraChapa: 10,
-    segundaChapa: 10
+let objeto = JSON.parse(localStorage.getItem('chapa')) || {
+    primeiraChapa: 0,
+    segundaChapa: 0
 }
 let canIStart = false
 const inicialScreen = document.getElementById('inicial-screen')
@@ -61,5 +61,5 @@ confirmBtn.addEventListener('click', function()  {
     console.log(objeto)
 })
 localStorage.setItem('chapa', JSON.stringify(objeto))
-objeto = JSON.parse(localStorage.getItem('chapa'))
+
 

@@ -1,13 +1,4 @@
 
-reset()
-
-function reset() {
-    canIReset = false
-    if(canIReset === true) {
-        localStorage.clear()
-    }
-}
-
 
 let objeto = JSON.parse(localStorage.getItem('chapa')) || {
     primeiraChapa: 0,

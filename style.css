@@ -7,13 +7,13 @@
 }
 
 body {
-    padding: 100px;
+    padding: 50px;
     width: 100%;
     height: 100vh;
 }
 
 #app {
-    padding: 50px;
+    padding: 25px;
     gap: 50px;
     display: flex;
     justify-content: center;
@@ -77,7 +77,6 @@ body {
 
 .info button {
     text-transform: uppercase;
-    width: 20%;
     font-weight: 700;
     background: #a8dadc;
     border: 1px solid #457b9d;
@@ -148,7 +147,6 @@ body {
 /* KEYBOARD-------------------------------------------------------------------------------- */
 
 .keyboard {
-    width: 600px;
     gap: 10px;
     padding: 30px;
     background: #343a40;
@@ -219,3 +217,18 @@ body {
     background: #40916c;
 }
 
+
+@media(max-width: 1000px) {
+    .keyboard {
+        padding: 10px;
+    }
+
+    .btn{
+        font-size: 20px;
+        padding: 6px;
+    }
+
+    #app {
+        gap: 25px;
+    }
+}

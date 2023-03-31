@@ -40,8 +40,6 @@ function again() {
     inicialScreen.style.display = 'flex'
 }
 
-
-
 const inputScreen = document.getElementById('input-screen')
 const confirmBtn = document.getElementById('confirm')
 
@@ -53,12 +51,12 @@ confirmBtn.addEventListener('click', function()  {
             objeto['primeiraChapa'] += 1
             localStorage.setItem('chapa', JSON.stringify(objeto))
 
-        } else if(input.value == 4){
+        } else if(input.value == 2){
             objeto['segundaChapa'] += 1
             localStorage.setItem('chapa', JSON.stringify(objeto))
 
         } else {
-            return alert("NÃO TEMOS UMA CHAPA COM ESSE NÚMERO: " + input.value)
+            return alert("NÃO TEMOS UMA CHAPA COM ESSE NÚMERO : " + input.value)
         }    
         canIStart = false
         inputScreen.style.display = 'none'
@@ -66,6 +64,8 @@ confirmBtn.addEventListener('click', function()  {
     
     setTimeout(again, 5000)
     console.log(objeto)
+    
 })
+
 
 
